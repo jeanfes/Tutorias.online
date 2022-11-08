@@ -11,6 +11,8 @@ MostrarRepetirContraseña.addEventListener("mouseup", HideRPassword)
 
 Mostrarcontraseña.addEventListener("touchstart", ShowPassword)
 MostrarRepetirContraseña.addEventListener("touchstart", ShowRPassword)
+Mostrarcontraseña.addEventListener("touchend", HidePassword)
+MostrarRepetirContraseña.addEventListener("touchend", HideRPassword)
 
 function ShowPassword(){
    Contraseña.type = "text";

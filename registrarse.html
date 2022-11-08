@@ -6,6 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./css/mobile.css">
     <link rel="icon" href="./assets/logo.png">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet">
     <title>Crear tu cuenta de Tutorias</title>
     <style>
         *{
@@ -92,22 +94,29 @@
             width: 100%;
             position: relative;
         }
-        .mostrar{
+        .material-icons{
             display: flex;
             justify-content: center;
             align-items: center;
             width: 17px;
-            height: 11px;
+            height: 15px;
+            font-size: 20px;
             border-radius: 50%;
             position: absolute;
             right: 0px;
             top: 14px;
             cursor: pointer;
+              /* Support for all WebKit browsers. */
+            -webkit-font-smoothing: antialiased;
+            /* Support for Safari and Chrome. */
+             text-rendering: optimizeLegibility;
+            /* Support for Firefox. */
+            -moz-osx-font-smoothing: grayscale;
+            /* Support for IE. */
+            font-feature-settings: 'liga';
         }
-        .mostrar img{
-            width: 100%;
-        }
-        .mostrar img:active{
+
+        .material-icons:active{
             opacity: 0.5;
         }
         .container4{
@@ -293,11 +302,11 @@
             <div class="container3">
                 <div>
                     <input type="password" name="contraseña" id="contraseña" placeholder="Contraseña">
-                    <span class="mostrar" id="mostrar1"><img src="./assets/visibility_black_24dp.svg" alt="ojo"></span>
+                    <span class="material-icons" id="mostrar1">visibility</span>
                 </div>
                 <div>
                     <input type="password" name="repetircontraseña" id="repetircontraseña" placeholder="Repetir contraseña">
-                    <span class="mostrar" id="mostrar2"><img src="./assets/visibility_black_24dp.svg" alt="ojo"></span>
+                    <span class="material-icons" id="mostrar2">visibility</span>
                 </div>
             </div>
             <div class="container4">
@@ -326,6 +335,7 @@
             <div class="button-signin_container">
                 <div class="error-signin_container">
                     <div id="dialog_error" class="active">
+                        <span></span>
                         <img src="./assets/error_black_18dp.svg" alt="error">
                         <p><b>Error:</b> Rellena el formulario correctamente</p>
                     </div>
