@@ -1,0 +1,64 @@
+:root{
+    --primary-color:#3a0ca3;
+    --secundary-color:#f2c955;
+    --text-color1: #ffffff;
+    --text-color2: #1f152c;
+    --text-color3: #959398;
+    --text-color4: #fe7b73;
+}
+
+html{
+    font-size: 72%;
+}
+
+.navbar-options{
+    height: 55%;
+}
+
+.search-container{
+    width: 90%;
+}
+
+.search-container img{
+    width: 22px;
+    height: 22px;
+}
+
+.search-container input{
+    font-size: 1.4rem;
+    letter-spacing: 1px;
+}
+.logo-container{
+    width: 500px;
+}
+.buttons-container{
+    width: 500px;
+}
+
+.main-container-img span{
+    width: 250px;
+    height: 250px;
+}
+
+.imagen3{
+    align-self: flex-end;
+}
+
+.imagen4{
+    display: flex;
+    width: 200px;
+    height: 200px;
+    background-image: url('../assets/persona4.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    border-bottom-left-radius: 50%;
+    border-bottom-right-radius: 50%;
+    border: 3px solid aqua;
+    align-self: flex-start;
+}
+
+.main-stadistics{
+    width: 70%;
+    margin: 0 auto;
+}

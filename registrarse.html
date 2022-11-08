@@ -1,0 +1,326 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/mobile.css">
+    <link rel="icon" href="./assets/logo.png">
+    <title>Crear tu cuenta de Tutorias</title>
+    <style>
+        :root{
+            --primary-color:#3a0ca3;
+            --secundary-color:#f2c955;
+            --text-color1: #ffffff;
+            --text-color2: #1f152c;
+            --text-color3: #959398;
+            --text-color4: #fe7b73;
+            }
+        body{
+            width: 100%;
+            height: 100%;
+            background: #ECE9E6;  /* fallback for old browsers */
+            background: -webkit-linear-gradient(to right, #FFFFFF, #ECE9E6);  /* Chrome 10-25, Safari 5.1-6 */
+            background: linear-gradient(to right, #FFFFFF, #ECE9E6); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+        }
+        section{
+            width: 500px;
+            height: auto;
+            background-color: white;
+            margin: 1.5rem auto;
+            padding: 40px;
+            box-shadow:  5px -5px 53px #bdbdbd,
+             -5px 5px 53px #ffffff;
+             display: flex;
+             flex-direction: column;
+             gap: 20px;
+        }
+        .logo{
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+        }
+        .logo img{
+            width: 30px;
+        }
+        .logo p{
+            font-size: 20px;
+            margin-left: 5px;
+            color: #737373;
+            font-weight: 600;
+            vertical-align: sub;
+        }
+        .title h1{
+            font-size: 21px;
+            font-weight: 400;
+            color: black;
+        }
+        .title p{
+            margin-top: 10px;
+            color: black;
+            font-size: 14px;
+            font-weight: 400;
+        }
+        form{
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+        }
+        label{
+            width: 100%;
+        }
+
+        .container1{
+            display: flex;
+            flex-direction: row;
+            gap: 25px;
+            position: relative;
+        }
+        .container3{
+            display: flex;
+            flex-direction: row;
+            gap: 25px;
+        }
+        .container3 div{
+            width: 100%;
+            position: relative;
+        }
+        .mostrar{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 17px;
+            height: 11px;
+            border-radius: 50%;
+            position: absolute;
+            right: 0px;
+            top: 14px;
+            cursor: pointer;
+        }
+        .mostrar img{
+            width: 100%;
+        }
+        .mostrar img:active{
+            opacity: 0.5;
+        }
+        .container4{
+            display: flex;
+            flex-direction: column;
+            gap: 5px;
+        }
+        .container4 p{
+            font-size: 13px;
+            margin-bottom: 8px;
+            margin-top: 5px;
+            color: #737373;
+        }
+        .birthday-main_container{
+            display: flex;
+            flex-direction: row;
+            gap: 10px;
+            height: 30px;
+            justify-content: space-between;
+        }
+
+        #edad{
+            width: 32%;
+            margin-top: 0px;
+            border-radius: 5px;
+            padding: 5px;
+            font-size: 14px;
+            border: 1px solid rgb(118, 118, 118);
+        }
+        #edad:focus{
+            border: 2px solid var(--primary-color);
+        }
+        .container5{
+            display: flex;
+            flex-direction: column;
+            gap: 5px;
+        }
+        .container5 p{
+            font-size: 13px;
+            margin-top: 5px;
+            color: #737373;
+        }
+        .genero-main_container{
+            display: flex;
+            flex-direction: row;
+            gap: 10px;
+            height: 30px;
+            justify-content: space-between;
+        }
+        .input-container_sex{
+            width: 33.3%;
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            align-items: center;
+            padding: 5px;
+            border-radius: 5px;
+            border: 1px solid rgb(118, 118, 118);
+        }
+        .input-container_sex:active{
+            border: 2px solid var(--primary-color);
+        }
+        .input-container_sex p{
+            margin-top: 0px;
+            color: black;
+        }
+
+        .input-container_sex input{
+            vertical-align: middle;
+        }
+        input:not([type="radio"]){
+            width: 100%;
+            border: none;
+            outline: none;
+            border-bottom: 1px solid var(--primary-color);
+            padding-bottom: 8px;
+            margin-top: 10px;
+            font-size: 15px
+        }
+        input:not([type="radio"])::placeholder{
+            font-size: 15px;
+        }
+        #button_signin{
+            width: 150px;
+            background-color: var(--secundary-color);
+            color: white;
+            align-self: flex-end;
+            padding: 8px 24px;
+            border: none;
+            cursor: pointer;
+            font-size: 15px;
+            margin-top: 20px;
+        }
+
+        .incorrecto{
+            border-bottom: 1px solid red !important;
+        }
+        .validaredad{
+            border: 1px solid red !important;
+        }
+        .button-signin_container{
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            justify-content: space-between;
+        }
+        .button-signin_container p{
+            font-size: 11px;
+            margin-left: 2px;
+        }
+        #dialog_error{
+            background-color: #ff655d;
+            padding: 2px;
+            border-radius: 8px;
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            justify-content: center;
+            margin-top: 20px;
+        }
+
+        .active{
+            opacity: 0;
+        }
+
+        #button_signin:hover{
+            background-color: #f0ad4e;
+        }
+        @media(max-width:600px){
+            section{
+                width: 100%;
+                height: 100%;
+                margin: 0px;
+            }
+            .button-signin_container{
+                flex-direction: column;
+            }
+            #button_signin{
+                align-self: center;
+            }
+            #dialog_error{
+                margin-top: 5px;
+            }
+        }
+        @media(max-width:420px){
+            .container1{
+                flex-direction: column;
+            }
+            .container3{
+                flex-direction: column;
+            }
+        }
+    </style>
+</head>
+<body>
+    <section>
+        <div class="logo">
+            <img src="./assets/logo.png" alt="logo-principal">
+            <p>Tutorias</p>
+        </div>
+        <div class="title">
+            <h1>Crear tu cuenta de Tutorias</h1>
+            <p>Es rápido y fácil</p>
+        </div>
+        <form action="">
+            <div class="container1">
+                <label for="input_name">
+                    <input type="text" name="nombre" id="input_name" placeholder="Nombre">
+                </label>
+                <label for="input_lastname">
+                    <input type="text" name="apellido" id="input_lastname" placeholder="Apellido">
+                </label>
+            </div>
+            <div class="container2">
+                <input type="email" name="correo" id="input_email" placeholder="Correo electrónico" autocomplete="email">
+            </div>
+            <div class="container3">
+                <div>
+                    <input type="password" name="contraseña" id="contraseña" placeholder="Contraseña">
+                    <span class="mostrar" id="mostrar1"><img src="./assets/visibility_black_24dp.svg" alt="ojo"></span>
+                </div>
+                <div>
+                    <input type="password" name="repetircontraseña" id="repetircontraseña" placeholder="Repetir contraseña">
+                    <span class="mostrar" id="mostrar2"><img src="./assets/visibility_black_24dp.svg" alt="ojo"></span>
+                </div>
+            </div>
+            <div class="container4">
+                <p>Edad (años)</p>
+                <div class="birthday-main_container">
+                    <input type="text" name="edad" id="edad">
+                </div>
+            </div>
+            <div class="container5">
+                <p>Genero</p>
+                <div class="genero-main_container">
+                    <label class="input-container_sex" for="hombre">
+                        <p>Hombre</p>
+                        <input type="radio" name="sexo" id="hombre" checked>
+                    </label>
+                    <label class="input-container_sex" for="mujer">
+                        <p>Mujer</p>
+                        <input type="radio" name="sexo" id="mujer">
+                    </label>
+                    <label class="input-container_sex" for="no-binario">
+                        <p>No binario</p>
+                        <input type="radio" name="sexo" id="no-binario">
+                    </label>
+                </div>
+            </div>
+            <div class="button-signin_container">
+                <div class="error-signin_container">
+                    <div id="dialog_error" class="active">
+                        <img src="./assets/error_black_18dp.svg" alt="error">
+                        <p><b>Error:</b> Rellena el formulario correctamente</p>
+                    </div>
+                </div>
+                <button id="button_signin" type="submit">Registrarse</button>
+            </div>
+        </form>
+        <script src="./registrarse.js"></script>
+    </section>
+</body>
+</html>
