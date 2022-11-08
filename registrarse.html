@@ -8,6 +8,11 @@
     <link rel="icon" href="./assets/logo.png">
     <title>Crear tu cuenta de Tutorias</title>
     <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
         :root{
             --primary-color:#3a0ca3;
             --secundary-color:#f2c955;
@@ -17,11 +22,13 @@
             --text-color4: #fe7b73;
             }
         body{
-            width: 100%;
-            height: 100%;
+            height: 100vh;
             background: #ECE9E6;  /* fallback for old browsers */
             background: -webkit-linear-gradient(to right, #FFFFFF, #ECE9E6);  /* Chrome 10-25, Safari 5.1-6 */
             background: linear-gradient(to right, #FFFFFF, #ECE9E6); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+            display: flex;
+            align-items: center;
+            justify-content: center;    
         }
         section{
             width: 500px;
@@ -31,9 +38,9 @@
             padding: 40px;
             box-shadow:  5px -5px 53px #bdbdbd,
              -5px 5px 53px #ffffff;
-             display: flex;
-             flex-direction: column;
-             gap: 20px;
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
         }
         .logo{
             display: flex;
@@ -230,9 +237,15 @@
             background-color: #f0ad4e;
         }
         @media(max-width:600px){
+            html{
+                height: auto;
+            }
+            body{
+                height: auto;
+            }
             section{
                 width: 100%;
-                height: 100%;
+                height: auto;
                 margin: 0px;
             }
             .button-signin_container{
@@ -242,7 +255,7 @@
                 align-self: center;
             }
             #dialog_error{
-                margin-top: 5px;
+                margin-top: 10px;
             }
         }
         @media(max-width:420px){

@@ -5,8 +5,12 @@ let MostrarRepetirContraseña = document.querySelector("#mostrar2");
 
 Mostrarcontraseña.addEventListener("mousedown", ShowPassword)
 Mostrarcontraseña.addEventListener("mouseup", HidePassword)
+
 MostrarRepetirContraseña.addEventListener("mousedown", ShowRPassword)
 MostrarRepetirContraseña.addEventListener("mouseup", HideRPassword)
+
+Mostrarcontraseña.addEventListener("touchstart", ShowPassword)
+MostrarRepetirContraseña.addEventListener("touchstart", ShowRPassword)
 
 function ShowPassword(){
    Contraseña.type = "text";
